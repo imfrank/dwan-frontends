@@ -9,12 +9,13 @@
     <div id="app"></div>
        <!-- 侧边栏 -->
        <ul class="mainapp-sidemenu">
-        <li onclick="push('/galaxy-product')">React16</li>
+        <li onclick="push('/product')">React16</li>
  
       </ul>
     <!-- built files will be auto injected -->
       <!-- 子应用  -->
       <main id="subapp-container"></main>
+
       <script>
         function push(subapp) { history.pushState(null, subapp, subapp) }
       </script>

@@ -14,7 +14,7 @@ const loader = loading => render({ loading });
 
 
 registerMicroApps([ 
-  { name: 'product', entry: '//localhost:7101',   container: '#subapp-viewport',activeRule:'product',loader },
+  { name: 'product', entry: '//localhost:7101',   container: '#subapp-viewport',activeRule:'/product',loader },
 ]);
 
 
