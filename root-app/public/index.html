@@ -11,7 +11,19 @@
     <noscript>
       <strong>We're sorry but <%= htmlWebpackPlugin.options.title %> doesn't work properly without JavaScript enabled. Please enable it to continue.</strong>
     </noscript>
+    666
+        <!-- 侧边栏 -->
+        <ul class="mainapp-sidemenu">
+          <li onclick="push('/product')">React16</li>
+   
+        </ul>
+    <main id="subapp-container"></main>
+
+    <script>
+      function push(subapp) { history.pushState(null, subapp, subapp) }
+    </script>
     <div id="app"></div>
+ 
     <!-- built files will be auto injected -->
   </body>
 </html>

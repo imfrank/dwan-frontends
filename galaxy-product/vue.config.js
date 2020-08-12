@@ -16,6 +16,7 @@ module.exports = {
    * Detail: https://cli.vuejs.org/config/#publicpath
    */
   outputDir: 'dist',
+  runtimeCompiler:true,
   assetsDir: 'static',
   filenameHashing: true,
   // tweak internal webpack configuration.
