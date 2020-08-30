@@ -18,7 +18,7 @@ export default new Router({
       component: layout,
       children:[
         {
-          path:'/product',
+          path:'/product/list',
           name:'product',
           meta: {
             title: 'vue',

@@ -1,6 +1,6 @@
 import Vue from 'vue';
 import VueRouter from 'vue-router';
-import HelloWorld from '@/components/HelloWorld'
+import productList from '@/views/product/list'
 
 Vue.use(VueRouter);
 
@@ -8,8 +8,13 @@ Vue.use(VueRouter);
 const routes = [
   {
     path: '/',
-    name: 'HelloWorld',
-    component: HelloWorld
+    name: 'login',
+    component: productList
+  },
+  {
+    path: '/product/list',
+    name: 'productList',
+    component: productList
   }
 ];
 
