@@ -2,6 +2,7 @@ import Vue from 'vue'
 import Router from 'vue-router'
 import login from '@/views/account/login'
 import layout from '@/views/shared/_layout'
+import overview from '@/views/workbench/overview'
 Vue.use(Router)
 
 export default new Router({
@@ -11,12 +12,18 @@ export default new Router({
       path: '/',
       name: 'login',
       component: login
-    },
+    },   
+    
     {
-      path: '/layout',
-      name: 'layout',
+      path: '/layout',     
       component: layout,
-      children:[
+      name:'layout',
+      redirect:'/workbench/overview',
+      children:[        
+        {
+          path: '/workbench/overview',
+          component: overview,         
+        },     
         {
           path:'/product/list',
           name:'product',

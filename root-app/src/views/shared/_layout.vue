@@ -4,15 +4,23 @@
       <el-row class="tac">
           <el-col :span="24">
              <div style="height:100px">
-              Micro front end
+                  Micro frontend
+               <div>
+                  <el-avatar> user </el-avatar>
+              </div>
+
              </div>
             <el-menu
               default-active="oauth"
               class="el-menu-vertical-demo"
               theme="dark" 
-              :default-openeds="openeds"
+          
               @open="handleOpen"
               @close="handleClose" router>
+              <el-menu-item index="/workbench/overview" >
+              <i class="el-icon-document"></i>
+              <span slot="title">概况</span>
+            </el-menu-item>
               <el-submenu index="m_oauth">
                 <template slot="title">
                   <i class="el-icon-location"></i>
@@ -20,8 +28,7 @@
                 </template>
                 <el-menu-item-group>  
                   <el-menu-item index="/scope/list">区域列表</el-menu-item>
-                  <el-menu-item index="/client/list">客户端列表</el-menu-item>
-                 
+                  <el-menu-item index="/client/list">客户端列表</el-menu-item>                 
                 </el-menu-item-group>                
               </el-submenu>
             <el-submenu index="m_product">
@@ -48,18 +55,19 @@
     </el-aside>
   <el-container>
     <el-header style="padding-left: 0px;padding-right: 0px;" >
-          <el-menu  :default-active="activeIndex" class="el-menu-demo" mode="horizontal" @select="handleSelect" router>
-          <el-menu-item index="/home/index">首页</el-menu-item>    
+          <el-menu   class="el-menu-demo" mode="horizontal" @select="handleSelect" router>
+          <el-menu-item index="/">首页</el-menu-item>    
             <el-menu-item index="3" disabled>消息中心</el-menu-item>
             <el-menu-item index="/product">订单管理</el-menu-item>
           </el-menu>
-        </el-header>
+    </el-header>
     <el-main>      	           
       <div  id="subapp-container">
 
       </div>
+      <router-view></router-view>
     </el-main>
-    <el-footer>演示</el-footer>
+    <el-footer>Copyright qinwei All Rights Reserved. </el-footer>
   </el-container>
 </el-container>
 </template>
@@ -82,7 +90,15 @@ export default {
                  },
             ok() {       
             console.log(this.$refs.sxx);
-        },
+        },  handleSelect(key, keyPath) {
+        console.log(key, keyPath);
+      },
+       handleOpen(key, keyPath) {
+        console.log(key, keyPath);
+      },
+      handleClose(key, keyPath) {
+        console.log(key, keyPath);
+      },
            loadSubApp(){
                  render({ loading: true });
                 
