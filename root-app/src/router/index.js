@@ -32,6 +32,15 @@ export default new Router({
             icon: 'appstore',          
             subApp: true
           }
+        },
+        {
+          path:'/ordering/list',
+          name:'ordering',
+          meta:{
+            title:'ordering',
+            icon:'appstore',
+            subApp:true
+          }
         }
       ]     
     }

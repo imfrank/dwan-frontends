@@ -58,7 +58,7 @@
           <el-menu   class="el-menu-demo" mode="horizontal" @select="handleSelect" router>
           <el-menu-item index="/">首页</el-menu-item>    
             <el-menu-item index="3" disabled>消息中心</el-menu-item>
-            <el-menu-item index="/product">订单管理</el-menu-item>
+            <el-menu-item index="/ordering/list">订单管理</el-menu-item>
           </el-menu>
     </el-header>
     <el-main>      	           
@@ -110,6 +110,13 @@ export default {
                               entry: '//localhost:5001/product/list', 
                               container: '#subapp-viewport',
                               activeRule:'/product/list',
+                              loader 
+                        },
+                         { 
+                              name: 'ordering', 
+                              entry: '//localhost:7100', 
+                              container: '#subapp-viewport',
+                              activeRule:'/ordering/list',
                               loader 
                         },
                   ]);
