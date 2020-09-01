@@ -114,7 +114,7 @@ export default {
                         },
                          { 
                               name: 'ordering', 
-                              entry: '//localhost:7100', 
+                              entry: '//localhost:5006', 
                               container: '#subapp-viewport',
                               activeRule:'/ordering/list',
                               loader 
