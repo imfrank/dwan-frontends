@@ -9,6 +9,7 @@ import LibVersion from './components/LibVersion';
 import HelloModal from './components/HelloModal';
 
 import Home from './pages/Home';
+import OrderList from './pages/order/list'
 const About = lazy(() => import('./pages/About'));
 
 const RouteExample = () => {
@@ -18,11 +19,13 @@ const RouteExample = () => {
         <Link to="/">Home</Link>
         <Divider type="vertical" />
         <Link to="/about">About</Link>
+        <Link to="/order">订单列表</Link>
       </nav>
       <Suspense fallback={null}>
         <Switch>
           <Route path="/" exact component={Home} />
           <Route path="/about" component={About} />
+          <Route path="/order" component={OrderList} />
         </Switch>
       </Suspense>
     </Router>
