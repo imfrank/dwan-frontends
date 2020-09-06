@@ -14,18 +14,18 @@ const About = lazy(() => import('./pages/About'));
 
 const RouteExample = () => {
   return (
-    <Router basename={window.__POWERED_BY_QIANKUN__ ? '/react16' : '/'}>
+    <Router basename={window.__POWERED_BY_QIANKUN__ ? '/ordering' : '/'}>
       <nav>
         <Link to="/">Home</Link>
         <Divider type="vertical" />
         <Link to="/about">About</Link>
-        <Link to="/order">订单列表</Link>
+        <Link to="/order/list">订单列表</Link>
       </nav>
       <Suspense fallback={null}>
         <Switch>
           <Route path="/" exact component={Home} />
           <Route path="/about" component={About} />
-          <Route path="/order" component={OrderList} />
+          <Route path="/order/list" component={OrderList} />
         </Switch>
       </Suspense>
     </Router>
@@ -35,11 +35,6 @@ const RouteExample = () => {
 export default function App() {
   return (
     <div className="app-main">
-      <LibVersion />
-      <HelloModal />
-
-      <Divider />
-
       <RouteExample />
     </div>
   );

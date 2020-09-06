@@ -1,4 +1,5 @@
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+var InterpolateHtmlPlugin = require('react-dev-utils/InterpolateHtmlPlugin');
 const { name } = require('./package');
 
 module.exports = {
@@ -51,6 +52,9 @@ module.exports = {
         removeComments: true,
         collapseWhitespace: true,
       },
+    }),
+    new InterpolateHtmlPlugin(HtmlWebpackPlugin, {
+      PUBLIC_URL: './public'
     }),
   ],
 };
