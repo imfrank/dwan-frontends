@@ -9,7 +9,7 @@ import LibVersion from './components/LibVersion';
 import HelloModal from './components/HelloModal';
 
 import Home from './pages/Home';
-import OrderList from './pages/order/list'
+import OrderList from './pages/order/list';
 const About = lazy(() => import('./pages/About'));
 
 const RouteExample = () => {
@@ -19,7 +19,7 @@ const RouteExample = () => {
         <Link to="/">Home</Link>
         <Divider type="vertical" />
         <Link to="/about">About</Link>
-        <Link to="/order/list">订单列表</Link>
+        <Link to="/order/list">二级目录测试</Link>
       </nav>
       <Suspense fallback={null}>
         <Switch>
@@ -35,6 +35,11 @@ const RouteExample = () => {
 export default function App() {
   return (
     <div className="app-main">
+      <LibVersion />
+      <HelloModal />
+
+      <Divider />
+
       <RouteExample />
     </div>
   );

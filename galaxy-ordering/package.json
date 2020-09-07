@@ -3,39 +3,35 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "@testing-library/jest-dom": "^4.2.4",
-    "@testing-library/react": "^9.3.2",
-    "@testing-library/user-event": "^7.1.2",
-    "antd": "^4.6.2",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
-    "react-router-dom": "^5.2.0",
-    "react-router-native": "^5.2.0"
+    "react-router-dom": "^5.1.2",
+    "react-scripts": "3.4.3",
+    "antd": "^3.25.2"
   },
-  "main": "./src/index.js",
   "scripts": {
-    "start": "webpack-dev-server",
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "webpack"
+    "start": "rescripts start",
+    "build": "rescripts build",
+    "test": "rescripts test",
+    "eject": "rescripts eject"
   },
   "eslintConfig": {
     "extends": "react-app"
   },
-  "devDependencies": {
-    "@babel/core": "^7.7.2",
-    "@babel/plugin-transform-react-jsx": "^7.7.0",
-    "@babel/preset-env": "^7.7.1",
-    "babel-loader": "^8.0.6",
-    "css-loader": "^3.2.0",
-    "html-webpack-plugin": "^4.0.0-beta.14",
-    "interpolate-html-plugin": "^3.0.0",
-    "react-scripts": "^3.4.3",
-    "style-loader": "^1.0.0",
-    "webpack": "^4.41.2",
-    "webpack-cli": "^3.3.10",
-    "webpack-dev-server": "^3.9.0"
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
   },
-  "browserslist": [
-    "last 2 Chrome versions"
-  ]
+  "devDependencies": {
+    "@rescripts/cli": "^0.0.14",
+    "react-scripts": "^3.4.1"
+  }
 }
