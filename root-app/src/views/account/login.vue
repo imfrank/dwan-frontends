@@ -16,7 +16,7 @@
             </el-form-item>
                 <el-form-item prop="password">
                     <el-input type="password" 
-                        v-model="ruleForm2.password" 
+                        v-model="ruleForm2.password" cd
                         auto-complete="off" 
                         placeholder="密码"
                     ></el-input>
