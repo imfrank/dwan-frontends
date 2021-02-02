@@ -1,6 +1,6 @@
 import Vue from 'vue';
 import VueRouter from 'vue-router';
-import productList from '@/views/product/list'
+import templateList from '@/views/adEmail/templateList'
 
 Vue.use(VueRouter);
 
@@ -9,12 +9,12 @@ const routes = [
   {
     path: '/',
     name: 'index',
-    component: productList
+    component: templateList
   },
   {
-    path: '/product/list',
+    path: '/adEmail/templateList',
     name: 'productList',
-    component: productList
+    component: templateList
   }
 ];
 

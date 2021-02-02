@@ -1,4 +1,4 @@
-# dawn-marketing
+# galaxy-product
 
 ## Project setup
 ```
